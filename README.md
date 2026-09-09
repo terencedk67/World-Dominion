@@ -15,6 +15,8 @@ United States/Washington D.C. opening scenario assembled procedurally by
 `AWDWashingtonLevelScript`, and every piece of gameplay data (11 nations,
 the opening mission, the first world event) needed to play it.
 
+- **`Docs/GETTING_STARTED.md`** — the master build checklist: one ordered
+  path from "clone this repo" to "playing the vertical slice with real art."
 - **`Docs/ARCHITECTURE.md`** — module layout, how the data-driven
   country/mission/event pipeline works, and why specific engineering
   tradeoffs were made (Enhanced Input, vehicle movement, AI, UMG).
