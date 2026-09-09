@@ -6,6 +6,7 @@
 #include "GameFramework/CharacterMovementComponent.h"
 #include "WDGameplayTags.h"
 #include "WDMissionSubsystem.h"
+#include "WDCharacterVisuals.h"
 #include "Kismet/GameplayStatics.h"
 
 AWDGovernmentNPC::AWDGovernmentNPC()
@@ -23,6 +24,12 @@ AWDGovernmentNPC::AWDGovernmentNPC()
 	PlaceholderBodyMesh->SetRelativeLocation(FVector(0.f, 0.f, -88.f));
 	PlaceholderBodyMesh->SetRelativeScale3D(FVector(0.5f, 0.5f, 1.7f));
 	GetMesh()->SetVisibility(false);
+}
+
+void AWDGovernmentNPC::BeginPlay()
+{
+	Super::BeginPlay();
+	WDCharacterVisuals::ApplyPlaceholderSwap(GetMesh(), PlaceholderBodyMesh);
 }
 
 FText AWDGovernmentNPC::GetInteractionPrompt_Implementation() const

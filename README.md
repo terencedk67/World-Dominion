@@ -24,6 +24,9 @@ the opening mission, the first world event) needed to play it.
 - **`Docs/PLACEHOLDER_ASSETS.md`** — every placeholder currently shipping
   (all built from engine-default primitives in C++) paired with the final
   art/animation it needs to be replaced with.
+- **`Docs/VISUAL_FIDELITY_ROADMAP.md`** — the concrete, step-by-step path to
+  the reference key art's quality bar: MetaHuman characters, Fab environment/
+  vehicle packs, and exact lighting/post-process settings.
 
 Built with C++ (core systems) + Blueprint/UMG (level scripting, final UI
 layout) on Enhanced Input, Gameplay Tags, Data Assets, World Partition,

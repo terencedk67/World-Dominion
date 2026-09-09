@@ -71,6 +71,8 @@ public:
 	virtual void NotifyObjectiveSatisfied_Implementation(AActor* Instigator) override;
 
 protected:
+	virtual void BeginPlay() override;
+
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "WorldDominion|Placeholder")
 	TObjectPtr<UStaticMeshComponent> PlaceholderBodyMesh;
 

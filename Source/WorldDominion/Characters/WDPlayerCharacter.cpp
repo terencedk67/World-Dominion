@@ -16,6 +16,7 @@
 #include "InputModifiers.h"
 #include "InputCoreTypes.h"
 #include "GameFramework/PlayerController.h"
+#include "WDCharacterVisuals.h"
 
 AWDPlayerCharacter::AWDPlayerCharacter()
 {
@@ -71,6 +72,7 @@ void AWDPlayerCharacter::BeginPlay()
 {
 	Super::BeginPlay();
 	BuildNativeInputAssets();
+	WDCharacterVisuals::ApplyPlaceholderSwap(GetMesh(), PlaceholderBodyMesh);
 }
 
 void AWDPlayerCharacter::BuildNativeInputAssets()

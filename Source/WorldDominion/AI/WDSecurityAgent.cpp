@@ -7,6 +7,7 @@
 #include "GameFramework/CharacterMovementComponent.h"
 #include "AIController.h"
 #include "Navigation/PathFollowingComponent.h"
+#include "WDCharacterVisuals.h"
 
 AWDSecurityAgent::AWDSecurityAgent()
 {
@@ -39,6 +40,7 @@ void AWDSecurityAgent::BeginPlay()
 {
 	Super::BeginPlay();
 	GetCharacterMovement()->MaxWalkSpeed = FollowSpeed;
+	WDCharacterVisuals::ApplyPlaceholderSwap(GetMesh(), PlaceholderBodyMesh);
 }
 
 void AWDSecurityAgent::SetFollowTarget(AActor* NewTarget)

@@ -4,6 +4,9 @@ Every placeholder below is built from engine-default content
 (`/Engine/BasicShapes/...`) purely in C++, so the project renders *something*
 correctly-scaled and correctly-collided the first time it runs — with no
 `.uasset` authored yet. This list is the replacement checklist for art/anim.
+See `VISUAL_FIDELITY_ROADMAP.md` for the concrete, step-by-step plan
+(MetaHuman, Fab packs, lighting settings) to replace everything here with
+the reference key art's actual quality bar.
 
 | System | Class | PLACEHOLDER (shipped) | FINAL ASSET REQUIRED |
 |---|---|---|---|
