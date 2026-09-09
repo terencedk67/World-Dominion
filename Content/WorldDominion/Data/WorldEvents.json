@@ -1,0 +1,39 @@
+[
+	{
+		"EventID": "GlobalChipShortage",
+		"Headline": "GLOBAL CHIP SHORTAGE THREATENS INDUSTRY",
+		"Description": "A sudden shortage of advanced semiconductors is stalling factories worldwide. Your economic and national security advisors are waiting in the Situation Room for a decision.",
+		"Category": "Economic",
+		"SatisfiesObjectiveID": "RespondToCrisis",
+		"Options": [
+			{
+				"Label": "Subsidize Domestic Production",
+				"Description": "Pour treasury funds into domestic chip fabrication to reduce reliance on foreign supply.",
+				"ResultingHeadline": "PRESIDENT ANNOUNCES DOMESTIC CHIP SUBSIDIES - MARKETS CAUTIOUSLY OPTIMISTIC",
+				"Effects": [
+					{ "StatID": "Treasury", "Delta": -15000000 },
+					{ "StatID": "PublicApproval", "Delta": 4 },
+					{ "StatID": "MilitaryPower", "Delta": 1 }
+				]
+			},
+			{
+				"Label": "Negotiate International Supply Agreement",
+				"Description": "Broker a multilateral agreement to stabilize the global chip supply chain.",
+				"ResultingHeadline": "PRESIDENT BROKERS INTERNATIONAL CHIP SUPPLY PACT",
+				"Effects": [
+					{ "StatID": "DiplomaticInfluence", "Delta": 25 },
+					{ "StatID": "PublicApproval", "Delta": 1 }
+				]
+			},
+			{
+				"Label": "Do Nothing",
+				"Description": "Let markets correct the shortage on their own.",
+				"ResultingHeadline": "WHITE HOUSE DECLINES TO INTERVENE AS CHIP SHORTAGE WORSENS",
+				"Effects": [
+					{ "StatID": "PublicApproval", "Delta": -6 },
+					{ "StatID": "Stability", "Delta": -3 }
+				]
+			}
+		]
+	}
+]

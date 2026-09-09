@@ -1,0 +1,19 @@
+# Unreal Engine generated/build artifacts
+Binaries/
+Build/
+DerivedDataCache/
+Intermediate/
+Saved/
+.vs/
+.vscode/
+*.sln
+*.suo
+*.xcodeproj
+*.xcworkspace
+
+# Ignore all uasset/umap binary content until real art lands, EXCEPT the
+# plain-text data files this project relies on to be readable/diffable.
+*.uasset
+*.umap
+!Content/WorldDominion/Data/*.csv
+!Content/WorldDominion/Data/*.json
