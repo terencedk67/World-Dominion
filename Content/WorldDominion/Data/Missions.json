@@ -1,0 +1,72 @@
+[
+	{
+		"MissionID": "AttendEmergencySummit",
+		"DisplayName": "Attend Emergency Summit",
+		"Category": "Mission.Diplomatic",
+		"NextMissionID": "RespondToGlobalCrisis",
+		"Objectives": [
+			{
+				"ObjectiveID": "TalkToSecretaryOfState",
+				"Type": "TalkTo",
+				"Description": "Speak to the Secretary of State",
+				"Optional": true
+			},
+			{
+				"ObjectiveID": "ReviewIntelBriefing",
+				"Type": "ReviewDocument",
+				"Description": "Review the morning intelligence briefing",
+				"Optional": true
+			},
+			{
+				"ObjectiveID": "MeetForeignDelegation",
+				"Type": "TalkTo",
+				"Description": "Meet the foreign delegation",
+				"Optional": true
+			},
+			{
+				"ObjectiveID": "TalkToChiefOfStaff",
+				"Type": "TalkTo",
+				"Description": "Speak with the Chief of Staff",
+				"Optional": false
+			},
+			{
+				"ObjectiveID": "EnterSituationRoom",
+				"Type": "GoTo",
+				"Description": "Enter the Situation Room",
+				"Optional": false
+			},
+			{
+				"ObjectiveID": "AttendNSCMeeting",
+				"Type": "AttendMeeting",
+				"Description": "Attend the National Security Council meeting",
+				"Optional": false
+			},
+			{
+				"ObjectiveID": "RespondToCrisis",
+				"Type": "MakeDecision",
+				"Description": "Respond to the unfolding geopolitical crisis",
+				"Optional": false
+			}
+		]
+	},
+	{
+		"MissionID": "RespondToGlobalCrisis",
+		"DisplayName": "Manage the Fallout",
+		"Category": "Mission.Diplomatic",
+		"NextMissionID": "",
+		"Objectives": [
+			{
+				"ObjectiveID": "ReviewWorldReaction",
+				"Type": "ReviewDocument",
+				"Description": "Review world media reaction to your decision",
+				"Optional": false
+			},
+			{
+				"ObjectiveID": "OpenWorldMap",
+				"Type": "Interact",
+				"Description": "Open the geopolitical map to plan your next move",
+				"Optional": false
+			}
+		]
+	}
+]
