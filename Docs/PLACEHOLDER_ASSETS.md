@@ -19,7 +19,7 @@ correctly-scaled and correctly-collided the first time it runs — with no
 | Main Menu | `UWDMainMenuWidget` | No visuals | `WBP_MainMenu`: WORLD DOMINION logo lockup, New Game/Continue/Settings, poster-quality background per the key art |
 | Nation Select | `UWDNationSelectWidget` | No visuals | `WBP_NationSelect`: nation card carousel, portrait/flag/stat-bar layout per the Nation Select reference |
 | Decision popup | `UWDDecisionWidget` | No visuals | `WBP_Decision`: cinematic crisis panel + option cards |
-| World Map | *(subsystem exists — `UWDDiplomacySubsystem`/`UWDTravelSubsystem`; no UI widget built yet)* | — | `WBP_WorldMap`: the tabbed MAP/TRAVEL/DIPLOMACY/MILITARY/TRADE/INTELLIGENCE/NATIONS command-center UI per the global-map reference |
+| World Map | `UWDWorldMapWidget` | No visuals — tabs/roster/action backing only | `WBP_WorldMap`: the tabbed MAP/TRAVEL/DIPLOMACY/MILITARY/TRADE/INTELLIGENCE/NATIONS command-center UI per the global-map reference, incl. a world map texture with `FWDCountryStats::MapPosition`-driven capital pins |
 | Country/leader art | `UWDCountryDataAsset` | `FlagTexture`/`LeaderPortrait` left null (Nation Select falls back to text-only until asset instances are authored) | National flag icons + cinematic leader portrait renders for all 11 (then 100+) nations |
 | Input | `AWDPlayerCharacter::BuildNativeInputAssets` | Native C++ `UInputAction`/`UInputMappingContext` (WASD/mouse/gamepad, no icons) | Authored `IMC_Default` + per-action icon set for a remappable-keybinds settings screen |
 | Enemy/threat AI | `AWDSecurityAgentController` | Sight perception wired, `OnPerceivedActor` logs only | Threat classification (crowd/NPC alignment tags), automatic protection-state escalation, weapon-ready animation state |

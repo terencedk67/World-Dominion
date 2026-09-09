@@ -52,7 +52,7 @@ Source/WorldDominion/
   Travel/          UWDTravelSubsystem, AWDCountryTravelNode
   Vehicles/        AWDPresidentialVehicle, AWDMotorcadeManager
   UI/              AWDHUD, UWDHUDWidget, UWDMainMenuWidget,
-                    UWDNationSelectWidget, UWDDecisionWidget
+                    UWDNationSelectWidget, UWDDecisionWidget, UWDWorldMapWidget
   SaveSystem/      UWDSaveGame, UWDSaveSubsystem
   Levels/          AWDWashingtonLevelScript (assembles the vertical slice)
   Data/            (reserved for future native data helpers)
@@ -174,10 +174,20 @@ asks for.
 Phase 1 is complete per the brief's own checklist: project architecture,
 character controller, interaction system, mission system, CountryData
 system, basic HUD backing, a Washington test scene, a White House exterior
-placeholder, and the security-agent follower system. Phase 2's items
-(presidential motorcade *cinematics*, White House interior, Oval
-Office/Situation Room *art*, richer NPC dialogue, the World Map *UI*, more
-world events) are architecturally unblocked — the subsystems they need
+placeholder, and the security-agent follower system. A first pass at
+Phase 2's World Map is also in: `UWDWorldMapWidget` (UI/) backs the
+MAP/TRAVEL/DIPLOMACY/MILITARY/TRADE/INTELLIGENCE/NATIONS tabbed
+command-center from the global-map reference — country roster with
+`FWDCountryStats::MapPosition` capital pins, a per-nation detail panel, and
+all ten diplomatic actions from the brief (`CallLeader` through
+`IssuePublicStatement`) routed through `UWDDiplomacySubsystem::
+ApplyDiplomaticAction`, with `VisitCountry` also kicking off
+`UWDTravelSubsystem::TravelTo`. It needs the same thing every other UI class
+here needs: a `WBP_WorldMap` UMG layout (see `PLACEHOLDER_ASSETS.md`).
+
+Everything else in Phase 2 (presidential motorcade *cinematics*, White House
+interior, Oval Office/Situation Room *art*, richer NPC dialogue, more world
+events) is architecturally unblocked — the subsystems they need
 (`UWDDiplomacySubsystem`, `UWDWorldEventSubsystem`, `UWDTravelSubsystem`,
 `AWDMotorcadeManager`) already exist and only need level art, UMG layout,
 and additional data entries layered on top.

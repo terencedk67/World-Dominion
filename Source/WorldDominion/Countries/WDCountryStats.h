@@ -73,6 +73,12 @@ struct WORLDDOMINION_API FWDCountryStats
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Country")
 	TArray<FName> StrategicRegions;
 
+	/** Normalized (0-1, top-left origin) position of the capital on an equirectangular
+	 *  world map texture - lets WBP_WorldMap place a capital pin per nation with a plain
+	 *  UV->Canvas conversion, no lat/long math needed at runtime. */
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Country", meta = (ClampMin = "0", ClampMax = "1"))
+	FVector2D MapPosition = FVector2D(0.5f, 0.5f);
+
 	/** Generic accessor used by UWDCountrySubsystem::ModifyStat/GetStat so decision/event
 	 *  effects (FWDStatEffect::StatID) can target any numeric field by name without a
 	 *  switch statement per caller. Returns false for an unrecognized StatID. */

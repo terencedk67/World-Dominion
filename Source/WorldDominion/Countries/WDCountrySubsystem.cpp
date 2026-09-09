@@ -111,8 +111,8 @@ bool UWDCountrySubsystem::ParseCsvRow(const TArray<FString>& Columns, FWDCountry
 {
 	// CountryID,DisplayName,Capital,GovernmentType,LeaderName,Population,GDP,Treasury,
 	// MilitaryPower,IntelligencePower,DiplomaticInfluence,PublicApproval,Stability,
-	// Resources,Allies,Rivals,Sanctions,TradePartners,StrategicRegions
-	if (Columns.Num() < 19)
+	// Resources,Allies,Rivals,Sanctions,TradePartners,StrategicRegions,MapPositionX,MapPositionY
+	if (Columns.Num() < 21)
 	{
 		return false;
 	}
@@ -136,6 +136,7 @@ bool UWDCountrySubsystem::ParseCsvRow(const TArray<FString>& Columns, FWDCountry
 	OutStats.Sanctions = ParseNameList(Columns[16]);
 	OutStats.TradePartners = ParseNameList(Columns[17]);
 	OutStats.StrategicRegions = ParseNameList(Columns[18]);
+	OutStats.MapPosition = FVector2D(FCString::Atof(*Columns[19]), FCString::Atof(*Columns[20]));
 
 	return !OutStats.CountryID.IsNone();
 }
